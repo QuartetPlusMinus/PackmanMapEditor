@@ -1,3 +1,6 @@
+#ifndef Tile_h
+#define Tile_h
+
 class Tile {
 public:
     int x, y;
@@ -17,18 +20,4 @@ public:
     ScrollingField(int x, int y, int w, int h, int offsetX, int offsetY);
 };
 
-class Menu {
-public:
-	Menu(int x, int y);
-
-	void draw(sf::RenderWindow &window);
-    void SelectedItem(int selectedItemIndex, bool selected);
-
-    int selectedItemIndex;
-    bool selected;
-
-private:
-	sf::Font font;
-    sf::RectangleShape navbar;
-    sf::Text menu[3];
-};
+#endif
